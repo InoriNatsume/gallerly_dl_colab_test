@@ -1,0 +1,13 @@
+# Dataset index files
+dataset_index_fixed.jsonl
+dataset_index_*.jsonl
+
+# Viewer cache folders
+.thumbs/
+.display/
+
+# Reference code (adjust names if needed)
+참조용/
+
+# Notebook checkpoints
+.ipynb_checkpoints/

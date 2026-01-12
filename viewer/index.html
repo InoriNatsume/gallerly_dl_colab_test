@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Local Image Viewer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <div class="brand-text">
+            <div class="brand-title">Local Image Viewer</div>
+            <div class="brand-sub" id="rootPath">Loading...</div>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <div class="stats" id="stats">0 items</div>
+          <label class="search">
+            <span class="search-label">Filter</span>
+            <input id="searchInput" type="text" placeholder="tag, name, caption" />
+          </label>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="grid" id="grid"></section>
+        <div class="empty" id="empty">
+          <div class="empty-title">No items</div>
+          <div class="empty-sub">Check your dataset path or filters.</div>
+        </div>
+      </main>
+    </div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <div class="lightbox-backdrop" data-action="close"></div>
+      <div class="lightbox-panel">
+        <button class="lightbox-close" data-action="close" aria-label="Close">×</button>
+        <div class="lightbox-body">
+          <div class="lightbox-image">
+            <img id="lightboxImage" alt="" />
+            <div class="lightbox-nav">
+              <button class="nav-btn" data-action="prev">‹</button>
+              <button class="nav-btn" data-action="next">›</button>
+            </div>
+          </div>
+          <div class="lightbox-meta">
+            <div class="meta-title" id="metaTitle">-</div>
+            <div class="meta-caption" id="metaCaption"></div>
+            <div class="meta-tags" id="metaTags"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
